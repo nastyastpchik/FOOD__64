@@ -1,0 +1,238 @@
+@import 'global.css';
+@import 'simplebar.css';
+@import 'product.css';
+@import 'products-grid.css';
+@import url("https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap");
+body {
+  font-family: "Philosopher", sans-serif;
+  margin: 0;
+  width: 100%;
+}
+.header {
+	position: relative;
+	z-index: 100;
+	
+	padding: 25px 0;
+
+}
+.header_logo {
+	height: 128px;
+  }
+.nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.nav__list {
+	display: flex;
+	align-items: center;
+	gap: 35px;
+}
+.header_list1 {
+	display: flex;
+	gap: 16px;
+	align-items: center;
+  }
+  .header_nav1 {
+	display: flex;
+	gap: 35px;
+  }
+  .container {
+	max-width: 1180px;
+	margin-left: auto;
+	margin-right: auto;
+  }
+    
+.nav__item:not(:last-child) {
+	
+}
+.header__nav a {
+	font-size: 16px;
+	
+  }
+  .nav__list a:hover {
+	opacity: 0.3;
+  }
+ 
+  .header_profile:hover{
+	opacity: 0.3;
+  }
+  
+ 
+.nav__link {
+	font-size: 16px;
+}
+
+.cart {
+	position: relative;
+	padding: 40px 19px;
+	transition: background-color 0.3s;
+}
+
+.cart.active:hover {
+	cursor: pointer;
+	background: rgba(93, 113, 221, 0.1);
+	transition: background-color 0.3s;
+}
+
+
+
+.cart__quantity {
+	position: absolute;
+	right: 2px;
+	top: 50%;
+	transform: translateY(-50%);
+	margin-top: -10px;
+	background-color: #de707b;
+	border-radius: 100%;
+	padding: 2px;
+	color: #fff;
+	font-size: 12px;
+	min-height: 16px;
+	min-width: 16px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.cart-content {
+	cursor: default;
+	width: 490px;
+	position: absolute;
+	top: 100%;
+	right: 0;
+	background-color: #fff;
+	box-shadow: 0px 4px 4px rgba(135, 135, 135, 0.25);
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.cart.active:hover .cart-content {
+	opacity: 1;
+	visibility: visible;
+	transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.content {
+	padding-top: 90px;
+}
+
+.cart-content__list {
+	max-height: 330px;
+}
+
+.cart-product {
+	display: flex;
+	align-items: center;
+	padding: 12px 20px;
+	padding-right: 13px;
+	transition: background-color 0.3s;
+}
+
+.cart-product:hover {
+	background: rgba(93, 113, 221, 0.1);
+	transition: background-color 0.3s;
+}
+
+.cart-product__img {
+	margin-right: 20px;
+	max-width: 100px;
+	max-height: 100px;
+	object-fit: cover;
+}
+
+.cart-product__title {
+	max-width: 300px;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
+	color: var(--color-dark);
+	margin-bottom: 18px;
+}
+
+.cart-product__price {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 23px;
+	color: var(--color-dark);
+}
+
+.cart-product__delete {
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	background-image: url("../img/trash.svg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	flex-shrink: 0;
+	width: 20px;
+	height: 20px;
+	padding: 0;
+}
+
+.cart-content__bottom {
+	padding: 20px;
+	border-top: 1px solid #eaeaea;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.cart-content__fullprice {
+	font-size: 14px;
+	line-height: 20px;
+	color: var(--color-dark);
+	display: flex;
+	flex-direction: column;
+}
+
+.fullprice {
+	margin-top: 10px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 23px;
+	color: var(--color-dark);
+}
+
+.cart-content__btn {
+	display: inline-block;
+	width: 246px;
+	text-align: center;
+}
+
+.simplebar-track.simplebar-vertical {
+	width: 4px;
+	background: rgba(77, 77, 77, 0.1);
+	border-radius: 5px;
+	right: 5px;
+	margin-top: 20px;
+	height: calc(100% - 40px);
+}
+
+.simplebar-track.simplebar-vertical .simplebar-scrollbar::before {
+	background: rgba(77, 77, 77, 0.2);
+	border-radius: 5px;
+	width: 100%;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	opacity: 1;
+}
+.programs-food-card-img {
+    width: 380px;
+    height: 215px;
+}
+.programs-food-card {
+    max-width: 500px;
+    height: 430px;
+    border-radius: 30px;
+    box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.250);
+
+    transition: all 0.5s;
+}

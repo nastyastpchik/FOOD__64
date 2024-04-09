@@ -1,0 +1,48 @@
+:root {
+	--gutter: 20px;
+}
+
+
+
+.grid-container {
+	/* width: 100%; */
+}
+
+.products-grid {
+	grid-column: 5 span;
+	display: flex;
+	grid-gap: var(--gutter);
+	grid-template-columns: repeat(3, 1fr);
+	justify-content: space-between;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+ul.products-grid {}
+
+.filters {
+	position: relative;
+}
+
+.filters-price__input {
+	width: 100%;
+}
+
+.fixed {
+	position: fixed;
+	top: var(--gutter);
+	left: 0;
+}
+
+.absolute {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.products-grid__item{
+	transition: all 0.5s;
+}
+.products-grid__item:hover{
+	transform: scale(1.08);
+}
